@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WMo-2q-EtY">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGi-1o-OoZ">
+                                <rect key="frame" x="168.5" y="657" width="77" height="30"/>
+                                <state key="normal" title="去调整图片"/>
+                                <connections>
+                                    <action selector="cropButtonClickAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dvy-0d-U5b"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test_img" translatesAutoresizingMaskIntoConstraints="NO" id="98z-e8-chP">
+                                <rect key="frame" x="37" y="158" width="340" height="483"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="98z-e8-chP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GVn-Ej-Oye"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="98z-e8-chP" secondAttribute="trailing" constant="16" id="NE7-E3-NiD"/>
+                            <constraint firstItem="EGi-1o-OoZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="3/2" id="jh9-U9-n2g"/>
+                            <constraint firstItem="EGi-1o-OoZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jsD-Yg-5ru"/>
+                            <constraint firstItem="EGi-1o-OoZ" firstAttribute="top" secondItem="98z-e8-chP" secondAttribute="bottom" constant="16" id="lHD-RO-UoA"/>
+                            <constraint firstItem="98z-e8-chP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="pSo-GA-Ipi"/>
+                            <constraint firstItem="98z-e8-chP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="tXC-QV-ti9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pNJ-Dx-y8T"/>
+                    <connections>
+                        <outlet property="imageView" destination="98z-e8-chP" id="Afr-8g-aTt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696" y="21"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="x9j-E9-nuS">
+            <objects>
+                <navigationController id="WMo-2q-EtY" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FdO-MR-Sxr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uqC-YX-3xN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U3b-U9-50M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-194" y="21"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="test_img" width="340" height="483"/>
+    </resources>
+</document>
